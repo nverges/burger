@@ -17,7 +17,7 @@ router.get("/", function(req, res) {
 
 router.post("/", function(req, res) {
   burger.create([
-    "name", "sleepy"
+    "burger_name", "devoured"
   ], [
     req.body.name, req.body.sleepy
   ], function() {
