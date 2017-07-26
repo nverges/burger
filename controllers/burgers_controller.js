@@ -17,17 +17,13 @@ router.get("/", function(req, res) {
 });
 
 router.post("/burgers", function(req, res) {
-
-  burger.create([
-    "burger_name"
-  ], [
-    req.body.burger_name
-  ], function() {
+  burger.create(req.body.burger_name, function(res) {
+  	console.log(res);
     res.redirect("/");
   });
 });
 
-router.put("/burgers:id", function(req, res) {
+router.put("/burgers/:id", function(req, res) {
 
   var condition = "id = " + req.params.id;
 

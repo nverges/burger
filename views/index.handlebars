@@ -1,13 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>EAT DA BURGER</title>
-</head>
-<body>
+
+<h1>Burgers Eaten</h1>
+
+{{#each burgers}}
+
+  <div class="burger">
+
+		<p>{{this.burger_name}}</p>
+
+  </div>
+
+{{/each}}
 
 
-eat that burger
+<h2>Add a Burger</h2>
+<form class="create-update-form" action="/" method="POST">
+
+  <div class="form-group">
+    <label for="burgerName">Burger Name:</label>
+    <input type="text" id="burgerName" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="devoured">Devoured?</label><br>
+    <input type="radio" name="devoured" value="1" checked> Devoured!<br>
+    <input type="radio" name="devoured" value="0"> Not Devoured :(
+  </div>
+
+  <button type="submit">Add Burger</button>
+</form>
 	
-</body>
-</html>
