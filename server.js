@@ -10,7 +10,7 @@ var app = express();
 // Serve static content for the app from the "public" directory in the application directory.
 app.use('/public', express.static("public"));
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded( { extended: false } ));
 
 // Override with POST having ?_method=DELETE
 app.use(methodOverride("_method"));
@@ -25,7 +25,10 @@ app.set("view engine", "handlebars");
 var routes = require("./controllers/burgers_controller.js");
 
 app.use("/", routes);
+app.use("/update", routes);
+app.use("/create", routes);
 
 app.listen(port, function() {
 	console.log('App listening on PORT: ' + port);
 });
+

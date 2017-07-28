@@ -1,6 +1,22 @@
 .burger {
 	background-color: #fff0b4;
-	padding: 15px;
+	padding: 8px;
 	border: blue;
+	max-width: 33%;
+	text-align: center;
+	font-size: 18px;
+	margin: 12px;
 };
 
+h1 #burgersEaten {
+	text-align: center;
+}
+
+#title {
+	text-align: center;
+	font-size: 48px;
+}
+
+#addBurger {
+	text-align: center;
+}
